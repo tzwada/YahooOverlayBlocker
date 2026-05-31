@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "default_locale": "ja",
+
+    "name": "__MSG_extension_name__",
+    "description": "__MSG_extension_description__",
+    "version": "1.0",
+
+    "icons": {
+        "48": "images/YAdBlocker@48.png",
+        "96": "images/YAdBlocker@96.png",
+        "128": "images/YAdBlocker@128.png",
+        "256": "images/YAdBlocker@256.png",
+        "512": "images/YAdBlocker@512.png"
+    },
+
+    "content_scripts": [{
+        "matches": [
+          "https://news.yahoo.co.jp/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+    }],
+    
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "images/YAdBlocker.svg"
+    },
+
+    "permissions": [ ]
+}

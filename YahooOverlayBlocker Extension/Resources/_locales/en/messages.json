@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "YAd Overlay Blocker",
+        "description": "The display name of the Safari extension."
+    },
+    "extension_description": {
+        "message": "Blocks intrusive overlay and full-screen ads on news article pages.",
+        "description": "Explains that the extension hides overlay and full-screen ads on news sites."
+    }
+}

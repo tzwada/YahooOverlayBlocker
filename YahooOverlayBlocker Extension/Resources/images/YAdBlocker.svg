@@ -1,0 +1,36 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- スラッシュ用マスク：全体を表示し、中央の矩形だけ非表示にする -->
+    <mask id="slashMask">
+      <!-- まず全部見えるように白で塗る -->
+      <rect x="0" y="0" width="1024" height="1024" fill="white" />
+      <!-- この四角形部分だけスラッシュを消す（Ad の領域） -->
+      <rect x="220" y="320" width="600" height="420" fill="black" />
+    </mask>
+  </defs>
+
+  <!-- 禁止マーク（黒） / 円の太さは 90 -->
+  <circle cx="512" cy="512" r="360"
+          fill="none"
+          stroke="black"
+          stroke-width="90" />
+
+  <!-- 斜線（黒） / マスクで Ad 部分だけ欠けさせる -->
+  <line x1="240" y1="240" x2="784" y2="784"
+        stroke="black"
+        stroke-width="90"
+        stroke-linecap="round"
+        mask="url(#slashMask)" />
+
+  <!-- 大きくした「Ad」：San Francisco 系フォント -->
+  <text x="512" y="640"
+        font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="600"
+        font-size="400"
+        fill="black"
+        text-anchor="middle">
+    Ad
+  </text>
+
+</svg>
