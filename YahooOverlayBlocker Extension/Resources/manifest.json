@@ -1,11 +1,9 @@
 {
     "manifest_version": 3,
     "default_locale": "ja",
-
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
-    "version": "1.0",
-
+    "version": "1.1",
     "icons": {
         "48": "images/YAdBlocker@48.png",
         "96": "images/YAdBlocker@96.png",
@@ -13,19 +11,32 @@
         "256": "images/YAdBlocker@256.png",
         "512": "images/YAdBlocker@512.png"
     },
-
-    "content_scripts": [{
-        "matches": [
-          "https://news.yahoo.co.jp/*"
-        ],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-    }],
-    
+    "content_scripts": [
+        {
+            "matches": [
+                "https://news.yahoo.co.jp/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://bunshun.jp/*"
+            ],
+            "css": [
+                "bunshun.css"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "bunshun.js"
+            ]
+        }
+    ],
     "action": {
         "default_popup": "popup.html",
         "default_icon": "images/YAdBlocker.svg"
     },
-
-    "permissions": [ ]
+    "permissions": []
 }

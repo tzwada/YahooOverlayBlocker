@@ -1,0 +1,21 @@
+/* 文春オンラインの全面広告枠。2026-09-15 の実ページのインスペクタで確認。
+   内部の iframe (#pfx_interstitial_wrap) に触れず、背景を含む枠を隠す。
+   この条件では通常広告 (46412 / 48248) や記事は対象にしない。
+   CSS により後から追加される枠にも適用し、ページのスクロール設定は保持する。 */
+div[data-ca-profitx-tagid="46411"][data-ca-profitx-spotid="pfxad_46411"] {
+    display: none !important;
+}
+
+/* 「次のページを読む」のCM視聴・質問回答の案内（2026-09-15 のDOM画像）。
+   背景とダイアログをまとめて隠す。フォーカス用の要素もこの案内がある場合のみ
+   非表示にし、同じ fc-message-root を使う別のメッセージには適用しない。
+   閲覧権限や広告視聴済み状態は変更しない。 */
+.fc-message-root > .fc-monetization-dialog-container {
+    display: none !important;
+}
+
+/* :has()を含む条件とは分離し、案内本体のルールを独立させる。 */
+.fc-message-root:has(> .fc-monetization-dialog-container) > #fc-focus-trap-pre-div,
+.fc-message-root:has(> .fc-monetization-dialog-container) > #fc-focus-trap-post-div {
+    display: none !important;
+}
