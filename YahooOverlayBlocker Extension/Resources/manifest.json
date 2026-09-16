@@ -32,6 +32,19 @@
             "js": [
                 "bunshun.js"
             ]
+        },
+        {
+            "matches": [
+                "https://fitnesslove.net/*",
+                "https://www.fitnesslove.net/*"
+            ],
+            "css": [
+                "fitnesslove.css"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "fitnesslove.js"
+            ]
         }
     ],
     "action": {

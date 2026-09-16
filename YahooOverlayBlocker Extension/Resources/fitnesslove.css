@@ -1,0 +1,20 @@
+/* FITNESS LOVE: 2026-09-16 のSafari Webインスペクタ画像で確認。
+   広告本体と暗い背景を囲む親要素を非表示にする。
+   後から挿入される場合やインラインの display:flex にも適用する。 */
+#im_interstitial_b {
+    display: none !important;
+}
+
+/* 「FITNESS LOVE」と表示される案内の親要素。
+   2026-09-16 のDOM画像で reward-block js-reward-modal is-show を確認。
+   表示状態の切り替え前から適用し、内部の枠と覆いをまとめて隠す。 */
+.reward-block.js-reward-modal {
+    display: none !important;
+}
+
+/* 実ページのtoggleBlur()が設定する写真・サムネイルのblur(6px)を解除。
+   写真ページに限定し、他の画像やレイアウトには適用しない。 */
+body.attachment .mainbox > #nocopy ul[class="image_frame"],
+body.attachment #gallery-1 {
+    filter: none !important;
+}

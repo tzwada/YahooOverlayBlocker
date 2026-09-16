@@ -4,7 +4,7 @@
         "description": "ニュース記事閲覧を快適にするためのSafari拡張機能の名称です。"
     },
     "extension_description": {
-        "message": "Yahoo!ニュースと文春オンラインの対応する全面広告を非表示にします。",
+        "message": "Yahoo!ニュース、文春オンライン、FITNESS LOVEの対応する全面広告を非表示にします。",
         "description": "ニュース記事ページに表示されるオーバーレイ広告を非表示にするSafari拡張機能です。"
     }
 }
