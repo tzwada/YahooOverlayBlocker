@@ -18,3 +18,9 @@ body.attachment .mainbox > #nocopy ul[class="image_frame"],
 body.attachment #gallery-1 {
     filter: none !important;
 }
+
+/* 2026-09-16に確認したGoogle全面広告の外枠。
+   インラインの!importantに対してはfitnesslove.jsでも枠ごと削除する。 */
+ins[id="gpt_unit_/9176203,22484934497/1759871_0"][data-vignette-loaded="true"] {
+    display: none !important;
+}

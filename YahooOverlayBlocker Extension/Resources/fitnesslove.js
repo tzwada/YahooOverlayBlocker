@@ -1,10 +1,13 @@
-// CSSのみで案内が残るケースに対応。確認済みの案内の親要素だけを削除する。
+// CSSのみで案内が残るケースに対応。確認済みの案内と全面広告の親要素だけを削除する。
 (() => {
     if (!['fitnesslove.net', 'www.fitnesslove.net'].includes(location.hostname)) return;
 
     let removedCount = 0;
     function removeRewardModal() {
-        document.querySelectorAll('.reward-block.js-reward-modal')
+        document.querySelectorAll(
+            '.reward-block.js-reward-modal, ' +
+            'ins[id="gpt_unit_/9176203,22484934497/1759871_0"][data-vignette-loaded="true"]'
+        )
             .forEach(modal => { modal.remove(); removedCount += 1; });
     }
 
@@ -14,7 +17,7 @@
         childList: true,
         subtree: true,
         attributes: true,
-        attributeFilter: ['class']
+        attributeFilter: ['class', 'id', 'data-vignette-loaded']
     });
     removeRewardModal();
 
